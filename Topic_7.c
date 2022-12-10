@@ -212,58 +212,160 @@
 // }
 
 //P187.10
-#define bachelor_tax    17850
-#define householder_tax 23900
-#define married_tax     29750
-#define divorced_tax    14875
+// #define bachelor_tax    17850
+// #define householder_tax 23900
+// #define married_tax     29750
+// #define divorced_tax    14875
 
-int main()
-{
-    char ch = 0;
-    double tax = 0;
-    double tax_flag = 0;
-    double income = 0;
-    printf("****************************************************************\n");
-    printf("***********Enter the letter to select your user type************\n");
-    printf("*A) bachelor                    B) householder                 *\n");
-    printf("*C) married                     D) divorced                    *\n");
-    printf("*Q) quit                                                       *\n");
-    printf("****************************************************************\n");
-    printf("请输入你的用户类型(A,B,C,D):");
-    scanf("%c", &ch);
-    while (ch != 'Q')
-    {
-        while ((ch < 'A' || ch > 'D') && ch != 'Q')
-        {
-            printf("请重新输入:");
-            scanf("%c", &ch);
-        }
-        if(ch == 'Q')
-            break;
-        switch (ch)
-        {
-            case 'A':
-            tax_flag = bachelor_tax;
-            break;
-            case 'B':
-            tax_flag = householder_tax;
-            break;
-            case 'C':
-            tax_flag = married_tax;
-            break;
-            case 'D':
-            tax_flag = divorced_tax;
-            break;
-        }
-        printf("请输入你的收入:");
-        scanf("%lf", &income);
-        if(income > tax_flag)
-            tax = tax_flag * 0.15 + (income - tax_flag) * 0.28;
-        else
-            tax = income * 0.15;
-    }
-    printf("已退出！\n");
+// int main()
+// {
+//     char ch = 0;
+//     double tax = 0;
+//     double tax_flag = 0;
+//     double income = 0;
+//     printf("****************************************************************\n");
+//     printf("***********Enter the letter to select your user type************\n");
+//     printf("*A) bachelor                    B) householder                 *\n");
+//     printf("*C) married                     D) divorced                    *\n");
+//     printf("*Q) quit                                                       *\n");
+//     printf("****************************************************************\n");
+//     printf("请输入你的用户类型(A,B,C,D):");
+//     while ((ch = getchar()) != 'Q')
+//     {
+//         while ((ch < 'A' || ch > 'D') && ch != 'Q')
+//         {
+//             printf("请重新输入:");
+//             scanf("%c%d", &ch);
+//         }
+//         if (ch == 'Q')
+//             break;
+//         switch (ch)
+//         {
+//             case 'A':
+//             tax_flag = bachelor_tax;
+//             break;
+//             case 'B':
+//             tax_flag = householder_tax;
+//             break;
+//             case 'C':
+//             tax_flag = married_tax;
+//             break;
+//             case 'D':
+//             tax_flag = divorced_tax;
+//             break;
+//         }
+//         printf("请输入你的收入:");
+//         scanf("%lf", &income);
+//         if (income > tax_flag)
+//             tax = tax_flag * 0.15 + (income - tax_flag) * 0.28;
+//         else
+//             tax = income * 0.15;
+//         printf("税金:%lf\n", tax);
+//         printf("请输入你的用户类型(A,B,C,D):");
+//         scanf("%c", &ch);
+//     }
+//     printf("已退出！\n");
 
-    system("pause");
-    return 0;
-}
+//     system("pause");
+//     return 0;
+// }
+
+//P187.11
+// #define globe_artichoke_price 1.25
+// #define beet_price            0.65
+// #define carrot_price          0.89
+
+// int main()
+// {
+//     double price = 0;
+//     double weight = 0;
+//     double a_weight = 0;
+//     double b_weight = 0;
+//     double c_weight = 0;
+//     double consume = 0;
+//     double discount = 0;
+//     double a_consume = 0;
+//     double b_consume = 0;
+//     double c_consume = 0;
+//     double transport_costs = 0;
+//     double all_weight = 0;
+//     double all_consume = 0;
+//     double all_discount = 0;
+//     double all_transport_costs = 0;
+//     char type = 0;
+//     printf("**************************************************************************\n");
+//     printf("Enter the letter to Choose the name of the vegetable you want to calculate\n");
+//     printf("*a) globe_artichoke                  b) beet                             *\n");
+//     printf("*c) carrot                           q) quit                             *\n");
+//     printf("**************************************************************************\n");
+//     printf("请选择你所需要的蔬菜(a,b,c,q)");
+//     while ((type = getchar()) != 'q')
+//     {
+//         while ((type < 'a' || type > 'c') && type != 'q')
+//         {
+//             printf("输入错误！请重新选择:");
+//             scanf("%c%d", &type);
+//         }
+//         if (type == 'q')
+//         {
+//             break;
+//         }
+//         printf("请输入你需要的磅数");
+//         scanf("%lf", &weight);
+//         /***运输费用的计算***/
+//         if (weight <= 5)
+//         {
+//             transport_costs = 3.50;
+//         }
+//         else if (weight > 5  && weight < 20)
+//         {
+//             transport_costs = 10;
+//         }
+//         else 
+//         {
+//             transport_costs = 8 + 0.1 * weight;
+//         }
+//         /***蔬菜消费的计算***/
+//         consume = price * weight;
+//         if (consume >= 100)
+//         {
+//             discount = 0.05 * consume;
+//             consume -= discount;
+//         }
+
+//         switch (type)
+//         {
+//             case 'a':
+//             price = globe_artichoke_price;
+//             a_weight += weight;
+//             a_consume += consume;
+//             break;
+//             case 'b':
+//             price = beet_price;
+//             b_weight += weight;
+//             b_consume += consume;
+//             break;
+//             case 'c':
+//             price = carrot_price;
+//             c_weight += weight;
+//             c_consume += consume;
+//             break;
+//         }
+//         all_discount += discount;
+//         all_weight += weight;
+//         all_consume += consume;
+//         all_transport_costs += transport_costs;
+//     }
+//     printf("每磅费用:%lf",all_consume / all_weight);
+//     printf("订购磅数:%lf", all_weight);
+//     printf("朝鲜蓟费用:%lf", a_weight);
+//     printf("甜菜费用:%lf", b_weight);
+//     printf("胡萝卜费用:%lf", c_weight);
+//     printf("订单总费用:%lf", all_consume);
+//     printf("折扣:%lf", all_discount);
+//     printf("运输费用:%lf", transport_costs);
+//     printf("总费用:%lf", all_consume + all_discount + all_transport_costs);
+
+//     system("pause");
+//     return 0;
+// }
