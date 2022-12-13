@@ -229,21 +229,89 @@
 //     return 0;
 // }
 
-//10个整数中的最大值
+// //10个整数中的最大值
+// int main()
+// {
+//     int arr[10] = { 1, 2, 3, 4, 5, 12, 7, 8, 9, 10 };
+//     int i = 0;
+//     int j = 0;
+//     int max = arr[0];
+//     for (i = 1; i <= 9; i++)
+//     {
+//         if (arr[i] > max)
+//         {
+//             max = arr[i];
+//         }
+//     }
+//     printf("%d\n", max);
+//     system("pause");
+//     return 0;
+// }
+
+// void change(int *a, int *b)
+// {
+//     int c = *a;
+//     *a = *b;
+//     *b = c;
+// }
+
+// int main()
+// {
+//     int a = 1;
+//     int b = 2;
+//     change(&a, &b);
+//     printf("%d %d", a, b);
+//     system("pause");
+//     return 0;
+// }
+
+// void multiplication_table(int ln)
+// {
+//     int i = 0;
+//     int j = 0;
+//     for (i = 1; i <= ln; i++)
+//     {
+//         for (j = 1; j <= i; j++)
+//         {
+//             printf("%dx%d=%d ", i, j, i * j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main()
+// {
+//     int line = 0;
+//     printf("输入行数:");
+//     scanf("%d", &line);
+//     multiplication_table(line);
+//     system("pause");
+//     return 0;
+// }
+
+// int main(int n)
+// {
+//     if (n == 5)
+//     {
+//         return 2;
+//     }
+//     else 
+//     {
+//         return 2 * main(n + 1);
+//     }
+//     system("pause");
+// }
+
+int reverse_string(char *str)
+{
+
+}
+
 int main()
 {
-    int arr[10] = { 1, 2, 3, 4, 5, 12, 7, 8, 9, 10 };
-    int i = 0;
-    int j = 0;
-    int max = arr[0];
-    for (i = 1; i <= 9; i++)
-    {
-        if (arr[i] > max)
-        {
-            max = arr[i];
-        }
-    }
-    printf("%d\n", max);
+    char string[] = "abcdef";
+
+    printf("%s", string);
     system("pause");
     return 0;
 }
