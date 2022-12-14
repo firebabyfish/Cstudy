@@ -302,16 +302,97 @@
 //     system("pause");
 // }
 
-int reverse_string(char *str)
-{
+// int reverse_string(char *str)
+// {
+//     int left = 0;
+//     int right = my_strlen(str) - 1;
+//     char tmp = 0;
+//     while (left < right)
+//     {
+//         tmp = str[left];
+//         str[left] = str[right];
+//         str[right] = tmp;
+//         left++;
+//         right--;
+//     }
+// }
 
+// int my_strlen(char *str)
+// {
+//     int count = 0;
+//     while (*str != '\0')
+//     {
+//         count++;
+//         str++;
+//     }
+//     return count;
+// }
+
+// void reverse_string(char *str)
+// {
+//     char tmp = *str;
+//     int len = my_strlen(str);
+//     *str = *(str + len - 1);
+//     *(str + len - 1) = '\0';
+//     if (my_strlen(str + 1) >= 2)
+//     {
+//         reverse_string(str + 1);
+//     }
+//     *(str +len - 1) = tmp;
+// }
+
+// int main()
+// {
+//     char string[] = "abcdef";
+//     reverse_string(string);
+//     printf("%s\n", string);
+//     system("pause");
+//     return 0;
+// }
+
+// int DigitSum(int n)
+// {
+//     if (n > 9)
+//     {
+//         return DigitSum(n / 10) + n % 10;
+//     }
+//     else
+//     {
+//         return n;
+//     }
+// }
+
+// int main()
+// {
+//     int num = 1289;
+//     int sum = DigitSum(num);
+//     printf("%d\n", sum);
+//     system("pause");
+//     return 0;
+// }
+
+double k_times_n(int n, int k)
+{
+    if (k == 0)
+    {
+        return 1.0;
+    }
+    else if (k > 0)
+    {
+        return n * k_times_n(n, k - 1);
+    }
+    else 
+    {
+        return 1.0 / k_times_n(n , -k);
+    }
 }
 
 int main()
 {
-    char string[] = "abcdef";
-
-    printf("%s", string);
+    int num = 0;
+    int k = 0;
+    scanf("%d %d", &num, &k);
+    printf("%lf\n", k_times_n(num, k));
     system("pause");
     return 0;
 }
