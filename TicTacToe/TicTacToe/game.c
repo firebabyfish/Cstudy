@@ -78,12 +78,15 @@ void Player_Time(char board[LINE][LIST], int line, int list)
 void Computer_Time(char board[LINE][LIST], int line, int list)
 {
     printf("电脑的回合:>\n");
-    int x = rand() % line;
-    int y = rand() % list;
-    while (board[x - 1][y - 1] == ' ')
+    while (1)
     {
-        board[x - 1][y - 1] = '#';
-        break;
+        int x = rand() % line;
+        int y = rand() % list;
+        if (board[x][y] == ' ')
+        {
+            board[x][y] = '#';
+            break;
+        }
     }
 }
 
@@ -114,7 +117,7 @@ char Is_Win(char board[LINE][LIST], int line, int list)
     }
     //左对角
     i = j = 1;
-    if (board[i][j] == board[i + 1][j + 1] && board[i][j] == board[i + 2][j + 2] && board[i][j] != ' ')
+    if (board[i][j] == board[i - 1][j - 1] && board[i][j] == board[i + 1][j + 1] && board[i][j] != ' ')
     {
         return board[i][j];
     }
