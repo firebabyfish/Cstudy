@@ -1,0 +1,3 @@
+﻿  栈区.cpp
+D:\C++\Cstudy\内存四区\内存四区\栈区.cpp(10): warning C4172: 返回局部变量或临时变量的地址: a
+  内存四区.vcxproj -> D:\C++\Cstudy\内存四区\x64\Debug\内存四区.exe
