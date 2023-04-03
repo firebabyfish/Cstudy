@@ -1,0 +1,4 @@
+﻿  2.类做友元.cpp
+D:\C++\Cstudy\友元\友元\2.类做友元.cpp(38,25): error C2248: “Building::Building”: 无法访问 private 成员(在“Building”类中声明)
+D:\C++\Cstudy\友元\友元\2.类做友元.cpp(6,2): message : 参见“Building::Building”的声明
+D:\C++\Cstudy\友元\友元\2.类做友元.cpp(4,7): message : 参见“Building”的声明
