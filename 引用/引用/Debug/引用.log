@@ -1,0 +1,3 @@
+﻿D:\VS\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(引用.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  函数高级.cpp
+  引用.vcxproj -> D:\C++\Cstudy\引用\Debug\引用+函数高级.exe
